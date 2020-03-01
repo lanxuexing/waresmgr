@@ -1,12 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScrollableTabComponent } from '@components/scrollable-tab';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from '@components/carousel';
+import { HorizontalGridComponent } from '@components/horizontal-grid';
+import { ScrollableTabComponent } from '@components/scrollable-tab';
 
 
 const COMMON = [
   ScrollableTabComponent,
   CarouselComponent,
+  HorizontalGridComponent,
+];
+
+const MODULE = [
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule,
 ];
 
 
@@ -15,10 +24,11 @@ const COMMON = [
     ...COMMON
   ],
   imports: [
-    CommonModule
+    ...MODULE
   ],
   exports: [
-    ...COMMON
+    ...COMMON,
+    ...MODULE
   ]
 })
 export class ComponentsModule { }

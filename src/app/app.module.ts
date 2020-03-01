@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { ComponentsModule } from '@components/components.module';
+import { PublicModule } from '@public/public.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsModule } from '@components/components.module';
+
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ComponentsModule } from '@components/components.module';
   ],
   imports: [
     BrowserModule,
+    PublicModule,
     AppRoutingModule,
     ComponentsModule
   ],

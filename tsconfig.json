@@ -40,6 +40,9 @@
       "@pipes/*": [
         "./src/app/pipes/*"
       ],
+      "@public/*": [
+        "./src/app/public/*"
+      ],
       "@services/*": [
         "./src/app/services/*"
       ],
