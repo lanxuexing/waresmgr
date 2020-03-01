@@ -1,0 +1,14 @@
+<ul>
+    <li *ngFor="let item of menus;let idx = index;">
+        <a
+            [class.active]="idx === selectIndex"
+            (click)="onSelect(item, idx)"
+            href="#">
+            {{item.title}}
+        </a>
+        <span
+            *ngIf="idx === selectIndex"
+            class="indicator">
+        </span>
+    </li>
+</ul>
