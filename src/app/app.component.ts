@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollableTab, Carousel } from './models';
+import { Confirm } from '@decorators/confirm';
 
 @Component({
   selector: 'app-root',
@@ -93,6 +94,7 @@ export class AppComponent {
     }
   ];
 
+  @Confirm('确定要打印信息吗？')
   onScrollableTabSelectChange(event: any) {
     console.log('菜单点击了...', event);
   }
