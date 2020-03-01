@@ -5,6 +5,7 @@
     ul {
         padding: 0;
         margin: 0;
+        /* Fix: scroll导致bannber也滚动，以及mobile devices上可以使用touch滚动 */
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
         display: flex;

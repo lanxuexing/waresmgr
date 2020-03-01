@@ -1,0 +1,18 @@
+<div class="container" [ngStyle]="{'height': sliderHeight}">
+    <div
+        #imgSlider
+        (scroll)="onScroll($event)"
+        class="image-slider">
+        <img
+            *ngFor="let item of sliders"
+            [src]="item.imgUrl"
+            [alt]="item.caption">
+    </div>
+    <div class="overlay">
+        <span
+            [ngStyle]="{'background-color': idx === selectedIndex ? indicatorActiveColor : indicatorColor}"
+            class="indicator"
+            *ngFor="let item of sliders;let idx = index;">
+        </span>
+    </div>
+</div>
