@@ -9,10 +9,10 @@ import { interval, Subscription } from 'rxjs';
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
   @Input() sliders: Carousel[] = []; // 轮播图
-  @Input() sliderHeight: string = '160px'; // 轮播图高度, 单位: px
-  @Input() timeInterval: number = 3000; // 时间间隔, 单位: ms
-  @Input() indicatorColor: string = 'white'; // 指示器默认颜色
-  @Input() indicatorActiveColor: string = 'red'; // 指示器激活颜色
+  @Input() sliderHeight = '160px'; // 轮播图高度, 单位: px
+  @Input() timeInterval = 3000; // 时间间隔, 单位: ms
+  @Input() indicatorColor = 'white'; // 指示器默认颜色
+  @Input() indicatorActiveColor = 'red'; // 指示器激活颜色
   @ViewChild('imgSlider', {static: true}) imgSlider: ElementRef;
   private selectedIndex = 0; // 当前轮播图索引
   private intervalSubs: Subscription;
@@ -43,7 +43,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
   onScroll(event: Event): void {
     const ratio = ((event.target as HTMLElement).scrollLeft * this.sliders.length) / (event.target as HTMLElement).scrollWidth; // 滑动比例
     this.selectedIndex = Math.round(ratio);
- 
+
   }
 
   ngOnDestroy(): void {
@@ -51,6 +51,5 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
       this.intervalSubs.unsubscribe();
     }
   }
- 
+
 }
-  

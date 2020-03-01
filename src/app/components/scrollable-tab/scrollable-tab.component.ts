@@ -7,12 +7,12 @@ import { ScrollableTab } from '@models/index';
   styleUrls: ['./scrollable-tab.component.scss']
 })
 export class ScrollableTabComponent {
-  @Input() backgroundColor: string = 'white'; // 背景色
-  @Input() titleColor: string = 'black'; // 文字的默认颜色
-  @Input() titleActiveColor: string = 'red'; // 选中时候的文字颜色
-  @Input() indicatorColor: string = 'black'; // 指示器默认颜色
-  @Input() indicatorActiveColor: string = 'red'; // 指示器默认颜色
-  @Input() selectIndex: number = 0; // 当前选中菜单
+  @Input() backgroundColor = 'white'; // 背景色
+  @Input() titleColor = 'black'; // 文字的默认颜色
+  @Input() titleActiveColor = 'red'; // 选中时候的文字颜色
+  @Input() indicatorColor = 'black'; // 指示器默认颜色
+  @Input() indicatorActiveColor = 'red'; // 指示器默认颜色
+  @Input() selectIndex = 0; // 当前选中菜单
   @Input() menus: ScrollableTab[] = []; // 菜单源数据
   @Output() selectChange: EventEmitter<{data: ScrollableTab, selected: number}> = new EventEmitter(); // 菜单选中数据
 
