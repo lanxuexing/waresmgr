@@ -10,7 +10,39 @@ import { Confirm } from '@decorators/confirm';
 export class AppComponent {
   scrollableTab: ScrollableTab[] = [
     {
-      title: '热门',
+      title: '热门推荐',
+      link: ''
+    },
+    {
+      title: '手机数码',
+      link: ''
+    },
+    {
+      title: '家用电器',
+      link: ''
+    },
+    {
+      title: '电脑办公',
+      link: ''
+    },
+    {
+      title: '计生情趣',
+      link: ''
+    },
+    {
+      title: '美妆护肤',
+      link: ''
+    },
+    {
+      title: '个护清洁',
+      link: ''
+    },
+    {
+      title: '汽车生活',
+      link: ''
+    },
+    {
+      title: '兜兜超市',
       link: ''
     },
     {
@@ -18,35 +50,11 @@ export class AppComponent {
       link: ''
     },
     {
-      title: '女装',
-      link: ''
-    },
-    {
-      title: '上衣',
-      link: ''
-    },
-    {
-      title: '鞋子',
-      link: ''
-    },
-    {
-      title: '裤子',
-      link: ''
-    },
-    {
-      title: '帽子',
-      link: ''
-    },
-    {
-      title: 'T恤',
-      link: ''
-    },
-    {
-      title: '衬衣',
-      link: ''
-    },
-    {
       title: '男鞋',
+      link: ''
+    },
+    {
+      title: '女装',
       link: ''
     },
     {
@@ -54,11 +62,107 @@ export class AppComponent {
       link: ''
     },
     {
-      title: '羽绒服',
+      title: '母婴童装',
       link: ''
     },
     {
-      title: '内衣',
+      title: '图书音像',
+      link: ''
+    },
+    {
+      title: '运动户外',
+      link: ''
+    },
+    {
+      title: '内衣配饰',
+      link: ''
+    },
+    {
+      title: '食品生鲜',
+      link: ''
+    },
+    {
+      title: '酒水饮料',
+      link: ''
+    },
+    {
+      title: '家具家装',
+      link: ''
+    },
+    {
+      title: '家居厨房',
+      link: ''
+    },
+    {
+      title: '箱包手袋',
+      link: ''
+    },
+    {
+      title: '钟表珠宝',
+      link: ''
+    },
+    {
+      title: '玩具乐器',
+      link: ''
+    },
+    {
+      title: '医药保健',
+      link: ''
+    },
+    {
+      title: '宠物生活',
+      link: ''
+    },
+    {
+      title: '礼品鲜花',
+      link: ''
+    },
+    {
+      title: '农资绿植',
+      link: ''
+    },
+    {
+      title: '生活旅行',
+      link: ''
+    },
+    {
+      title: '奢侈品',
+      link: ''
+    },
+    {
+      title: '兜兜国际',
+      link: ''
+    },
+    {
+      title: '艺术邮币',
+      link: ''
+    },
+    {
+      title: '二手商品',
+      link: ''
+    },
+    {
+      title: '特产馆',
+      link: ''
+    },
+    {
+      title: '兜兜金融',
+      link: ''
+    },
+    {
+      title: '国际名牌',
+      link: ''
+    },
+    {
+      title: '拍卖',
+      link: ''
+    },
+    {
+      title: '房产',
+      link: ''
+    },
+    {
+      title: '工业品',
       link: ''
     }
   ];

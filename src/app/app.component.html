@@ -1,10 +1,13 @@
+<!-- 顶部导航栏 -->
 <app-scrollable-tab
     (selectChange)="onScrollableTabSelectChange($event)"
     [menus]="scrollableTab">
 </app-scrollable-tab>
+<!-- 轮播图 -->
 <app-carousel
     [sliders]="banners">
 </app-carousel>
+<!-- 滚动菜单 -->
 <app-horizontal-grid>
     <div
     appGridItem
