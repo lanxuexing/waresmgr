@@ -1,12 +1,22 @@
+<!-- 内容投影选择器可以是[标签/样式/指令]且可以组合使用 -->
+<!-- 内容投影选择标签 -->
+<!-- <ng-content select="div"></ng-content> -->
+<!-- 内容投影选择class样式类 -->
+<!-- <ng-content select=".special"></ng-content> -->
+
 <div
-    appGridItem
-    *ngFor="let item of channels">
-    <img
-        appGridItemImage
-        [src]="item.icon"
-        [alt]="item.link">
-    <span
-        appGridItemTitle>
-        {{item.title}}
-    </span>
+    class="container"
+    [ngStyle]="{
+        'grid-template-rows': templateRows,
+        'grid-template-columns': templateColumns
+    }"
+    (scroll)="onScroll($event)">
+    <!-- 内容投影选择指令 -->
+    <ng-content select="[appGridItem]"></ng-content>
+</div>
+<div class="underline" *ngIf="scrollable">
+    <div
+        class="highlight"
+        [ngStyle]="{'margin': sliderMargin}">
+    </div>
 </div>

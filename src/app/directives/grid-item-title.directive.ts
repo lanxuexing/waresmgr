@@ -9,7 +9,7 @@ export class GridItemTitleDirective implements OnInit {
   gridArea = 'title';
   @HostBinding('style.font-size')
   @Input()
-  fontSize = '0.5rem';
+  fontSize = '0.6rem';
 
   constructor(
     private elementRef: ElementRef,

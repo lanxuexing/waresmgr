@@ -5,7 +5,18 @@
 <app-carousel
     [sliders]="banners">
 </app-carousel>
-<app-horizontal-grid
-    >
+<app-horizontal-grid>
+    <div
+    appGridItem
+    *ngFor="let item of channels">
+        <img
+            appGridItemImage
+            [src]="item.icon"
+            [alt]="item.link">
+        <span
+            appGridItemTitle>
+            {{item.title}}
+        </span>
+    </div>
 </app-horizontal-grid>
 <router-outlet></router-outlet>
