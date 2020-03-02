@@ -1,9 +1,15 @@
-import { Directive, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, OnInit, ElementRef, Renderer2, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appGridItemTitle]'
 })
 export class GridItemTitleDirective implements OnInit {
+  // 第二种写法: HostBinding 绑定宿主的属性or样式，可以套用@Input()
+  @HostBinding('style.grid-area')
+  gridArea = 'title';
+  @HostBinding('style.font-size')
+  @Input()
+  fontSize = '0.5rem';
 
   constructor(
     private elementRef: ElementRef,
@@ -11,7 +17,8 @@ export class GridItemTitleDirective implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.render.setStyle(this.elementRef.nativeElement, 'grid-area', 'title');
+    // 第一种写法:
+    // this.render.setStyle(this.elementRef.nativeElement, 'grid-area', 'title');
   }
 
 }
