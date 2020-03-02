@@ -65,32 +65,44 @@ export class AppComponent {
 
   banners: Carousel[] = [
     {
-      imgUrl : 'https://images.unsplash.com/photo-1441742917377-57f78ee0e582?h=1024',
-      caption : '你那一笑倾国倾城'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/100563/23/13332/81509/5e58ec6cEd3575a24/475d405d5a7e765b.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '女神爆品清单'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?h=1024\')',
-      caption : '那里记录了最唯美的爱情故事'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/103102/30/13113/136841/5e561432E6ecda47c/f93fab80bccb1a01.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '科学防脱，熬夜不脱发'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1441448770220-76743f9e6af6?h=1024\')',
-      caption : '我怎么是一个剩女'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/92879/2/13685/128557/5e5a1932E2990f3c1/6b4d6a8083f87fcc.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '雅思兰黛海外'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1441260038675-7329ab4cc264?h=1024\')',
-      caption : '生命中最后的四分钟'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/95014/10/11781/81228/5e3bb21aE7fbb83b8/dc00b537e9c11dd1.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '天然翡翠'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1441126270775-739547c8680c?h=1024\')',
-      caption : '我们都需要治疗'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://imgcps.jd.com/ling4/65788105779/5a6J5YWo56ys5LiA/54m55q6K5pe25pyf5L-d5oqk5aW96Ieq5bex/p-5d91a4f642dd5b7c7d52cbe1/288b807a/cr/s1125x690/q70.jpg',
+      caption : '安全防护，保护自己'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?h=1024\')',
-      caption : '雨漓漓地下一滴就是一颗心愿'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/103607/38/13259/157756/5e5628fbE2137b5ca/30aee4d8fc38790a.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '女神心选礼'
     },
     {
-      imgUrl : 'https://images.unsplash.com/photo-1440847899694-90043f91c7f9?h=1024\')',
-      caption : '想拥有这世界的每缕阳光'
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/95842/38/12546/80187/5e4ba3e7E09e0da3b/92aac67aefdf6b6f.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '大牌空调聚惠'
+    },
+    {
+      // tslint:disable-next-line:max-line-length
+      imgUrl : 'https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94711/36/13532/88700/5e5a126aE07ebc5ed/4ba19b99333cb6ce.jpg!cr_1125x445_0_171!q70.jpg',
+      caption : '冰洗宠你，礼物拿去'
     }
   ];
 

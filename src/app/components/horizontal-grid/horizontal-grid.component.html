@@ -1,1 +1,12 @@
-<p>{{ title }}</p>
+<div
+    appGridItem
+    *ngFor="let item of channels">
+    <img
+        appGridItemImage
+        [src]="item.icon"
+        [alt]="item.link">
+    <span
+        appGridItemTitle>
+        {{item.title}}
+    </span>
+</div>
