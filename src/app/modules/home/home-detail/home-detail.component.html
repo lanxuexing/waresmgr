@@ -1,0 +1,19 @@
+<!-- 轮播图 -->
+<app-carousel
+    [sliders]="banners">
+</app-carousel>
+<!-- 滚动菜单 -->
+<app-horizontal-grid>
+    <div
+    appGridItem
+    *ngFor="let item of channels">
+        <img
+            appGridItemImage
+            [src]="item.icon"
+            [alt]="item.link">
+        <span
+            appGridItemTitle>
+            {{item.title}}
+        </span>
+    </div>
+</app-horizontal-grid>
