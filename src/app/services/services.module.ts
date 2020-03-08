@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HomeService } from '@services/home';
 
-
+const COMMON = [
+  HomeService
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
+  providers: [
+    ...COMMON
   ]
 })
 export class ServicesModule { }

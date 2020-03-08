@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ComponentsModule } from '@components/components.module';
-import { HomeRoutingModule } from '@modules/home/home.routing';
-import { HomeComponent } from '@modules/home/home.component';
 import { HomeDetailComponent } from '@modules/home/home-detail';
+import { HomeComponent } from '@modules/home/home.component';
+import { HomeRoutingModule } from '@modules/home/home.routing';
 
 const COMMON = [
     HomeComponent,
@@ -15,7 +15,7 @@ const COMMON = [
     ],
     imports: [
         ComponentsModule,
-        HomeRoutingModule
+        HomeRoutingModule,
     ],
     exports: [],
     providers: [],
