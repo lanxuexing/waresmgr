@@ -3,7 +3,9 @@ import { Carousel } from '@models/carousel';
 import { HorizontalGrid } from '@models/horizontal-grid';
 import { ScrollableTab } from '@models/scrollable-tab';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class HomeService {
     private scrollableTab: ScrollableTab[] = [
         {

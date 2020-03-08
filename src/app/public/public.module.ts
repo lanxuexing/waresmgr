@@ -3,14 +3,12 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '@components/components.module';
-import { ServicesModule } from '@services/services.module';
 
 const COMMON = [
   BrowserAnimationsModule,
   HttpClientModule,
   RouterModule,
-  ComponentsModule,
-  ServicesModule
+  ComponentsModule
 ];
 
 
