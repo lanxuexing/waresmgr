@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Confirm } from '@decorators/confirm';
 import { ScrollableTab } from '@models/index';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -207,11 +207,16 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  @Confirm('确定要打印信息吗？')
-  onScrollableTabSelectChange(event: any) {
-    console.log('菜单点击了...', event);
-  }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void { }
+
+  // 滚动菜单点击事件
+  onScrollableTabSelectChange(topMenu: ScrollableTab) {
+    console.log('菜单点击了...', topMenu);
+    this.router.navigate(['home', topMenu.link]);
+  }
 
 }

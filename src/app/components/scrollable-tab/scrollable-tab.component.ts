@@ -14,17 +14,14 @@ export class ScrollableTabComponent {
   @Input() indicatorActiveColor = 'red'; // 指示器默认颜色
   @Input() selectIndex = 0; // 当前选中菜单
   @Input() menus: ScrollableTab[] = []; // 菜单源数据
-  @Output() selectChange: EventEmitter<{data: ScrollableTab, selected: number}> = new EventEmitter(); // 菜单选中数据
+  @Output() selectChange: EventEmitter<ScrollableTab> = new EventEmitter(); // 菜单选中数据
 
   constructor() { }
 
   // 监听菜单选中事件
   onSelect(item: ScrollableTab, index: number): void {
     this.selectIndex = index;
-    this.selectChange.emit({
-      data: item,
-      selected: index
-    });
+    this.selectChange.emit(item);
   }
 
 }

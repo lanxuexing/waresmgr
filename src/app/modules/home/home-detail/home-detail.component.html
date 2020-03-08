@@ -1,19 +1,27 @@
-<!-- 轮播图 -->
-<app-carousel
-    [sliders]="banners">
-</app-carousel>
-<!-- 滚动菜单 -->
-<app-horizontal-grid>
-    <div
-    appGridItem
-    *ngFor="let item of channels">
-        <img
-            appGridItemImage
-            [src]="item.icon"
-            [alt]="item.link">
-        <span
-            appGridItemTitle>
-            {{item.title}}
-        </span>
-    </div>
-</app-horizontal-grid>
+<!-- 热门推荐 -->
+<div *ngIf="selectedTabLink == 'hot-rec' else other">
+    <!-- 轮播图 -->
+    <app-carousel
+        [sliders]="banners">
+    </app-carousel>
+    <!-- 滚动菜单 -->
+    <app-horizontal-grid>
+        <div
+        appGridItem
+        *ngFor="let item of channels">
+            <img
+                appGridItemImage
+                [src]="item.icon"
+                [alt]="item.link">
+            <span
+                appGridItemTitle>
+                {{item.title}}
+            </span>
+        </div>
+    </app-horizontal-grid>
+</div>
+
+<!-- 其他模块 -->
+<ng-template #other>
+    other works!
+</ng-template>

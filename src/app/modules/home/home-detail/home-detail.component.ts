@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Carousel } from '@models/carousel';
 import { HorizontalGrid } from '@models/horizontal-grid';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-detail',
@@ -172,8 +173,16 @@ export class HomeDetailComponent implements OnInit {
       link: 'All'
     }
   ];
+  selectedTabLink: string; // 当前选中的TopMenuLink
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) {
+    this.route.paramMap.subscribe(params => {
+      console.log('路由参数: ', params);
+      this.selectedTabLink = params.get('tabLink');
+    });
+  }
 
   ngOnInit(): void { }
 

@@ -3,8 +3,7 @@
         <a
             [ngStyle]="{'color': idx === selectIndex ? titleActiveColor : titleColor}"
             [class.active]="idx === selectIndex"
-            (click)="onSelect(item, idx)"
-            href="#">
+            (click)="onSelect(item, idx)">
             {{item.title}}
         </a>
         <span
