@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-horizontal-grid',
   templateUrl: './horizontal-grid.component.html',
-  styleUrls: ['./horizontal-grid.component.scss']
+  styleUrls: ['./horizontal-grid.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HorizontalGridComponent {
   @Input() cols = 10;

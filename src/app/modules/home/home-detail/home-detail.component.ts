@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Carousel } from '@models/carousel';
 import { HorizontalGrid } from '@models/horizontal-grid';
-import { ActivatedRoute } from '@angular/router';
 import { HomeService } from '@services/home';
 
 @Component({

@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnDestroy, Renderer2, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { Carousel } from '@models/index';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
   @Input() sliders: Carousel[] = []; // 轮播图

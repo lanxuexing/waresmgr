@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { ScrollableTab } from '@models/index';
 
 @Component({
   selector: 'app-scrollable-tab',
   templateUrl: './scrollable-tab.component.html',
-  styleUrls: ['./scrollable-tab.component.scss']
+  styleUrls: ['./scrollable-tab.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScrollableTabComponent {
   @Input() backgroundColor = 'white'; // 背景色
