@@ -1,0 +1,23 @@
+# @name 基础配置项
+@API = http://localhost:3000
+
+##########################【home】###########################
+
+###
+
+# 首页顶部可滚动菜单
+# @name tbas
+GET {{API}}/tabs
+
+###
+
+# 首页轮播图
+# @name banners
+GET {{API}}/banners
+
+###
+
+# 首页分类网格菜单
+# @name channels
+GET {{API}}/channels
+
