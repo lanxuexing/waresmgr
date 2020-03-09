@@ -1,1 +1,1 @@
-export * from './interceptors.module';
+export * from './request.interceptor';

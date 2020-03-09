@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AutoUnsubscribe } from '@decorators/rxjs';
 import { Carousel } from '@models/carousel';
 import { HorizontalGrid } from '@models/horizontal-grid';
 import { HomeService } from '@services/home';
 
+@AutoUnsubscribe()
 @Component({
   selector: 'app-home-detail',
   templateUrl: './home-detail.component.html',
   styleUrls: ['./home-detail.component.scss']
 })
-export class HomeDetailComponent implements OnInit {
+export class HomeDetailComponent implements OnInit, OnDestroy {
   banners: Carousel[] = [];
   channels: HorizontalGrid[] = [];
   selectedTabLink: string; // 当前选中的TopMenuLink
@@ -25,8 +27,14 @@ export class HomeDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.banners = this.homeService.getBannerData();
-    this.channels = this.homeService.getHorizontalGridData();
+    this.homeService.getBannerData().subscribe(tabs => {
+      this.banners = tabs;
+    });
+    this.homeService.getHorizontalGridData().subscribe(channels => {
+      this.channels = channels;
+    });
   }
+
+  ngOnDestroy(): void { }
 
 }

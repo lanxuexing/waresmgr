@@ -4,6 +4,8 @@ import { ComponentsModule } from '@components/components.module';
 import { PublicModule } from '@public/public.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptor } from '@interceptors/index';
 
 
 @NgModule({
@@ -16,7 +18,13 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     ComponentsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

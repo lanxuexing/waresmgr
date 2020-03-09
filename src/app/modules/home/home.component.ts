@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { AutoUnsubscribe } from '@decorators/rxjs';
 import { ScrollableTab } from '@models/index';
 import { HomeService } from '@services/home';
 
+@AutoUnsubscribe()
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   scrollableTab: ScrollableTab[] = [];
 
   constructor(
@@ -17,7 +19,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.scrollableTab = this.homeService.getScrollTabData();
+    this.homeService.getScrollTabData().subscribe(banners => {
+      this.scrollableTab = banners;
+    });
   }
 
   // 滚动菜单点击事件
@@ -25,5 +29,7 @@ export class HomeComponent implements OnInit {
     console.log('菜单点击了...', topMenu);
     this.router.navigate(['home', topMenu.link]);
   }
+
+  ngOnDestroy(): void { }
 
 }
