@@ -5,7 +5,7 @@ import { PublicModule } from '@public/public.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RequestInterceptor } from '@interceptors/index';
+import { RequestInterceptor, ResponseInterceptor } from '@interceptors/index';
 
 
 @NgModule({
@@ -22,6 +22,11 @@ import { RequestInterceptor } from '@interceptors/index';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: RequestInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ResponseInterceptor,
       multi: true
     }
   ],
