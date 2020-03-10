@@ -5,12 +5,14 @@ import { CarouselComponent } from '@components/carousel';
 import { HorizontalGridComponent } from '@components/horizontal-grid';
 import { ScrollableTabComponent } from '@components/scrollable-tab';
 import { DirectivesModule } from '@directives/index';
+import { TimeHourglassComponent } from '@components/time-hourglass';
 
 
 const COMMON = [
   ScrollableTabComponent,
   CarouselComponent,
   HorizontalGridComponent,
+  TimeHourglassComponent,
 ];
 
 const MODULE = [

@@ -15,6 +15,9 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
   banners: Carousel[] = [];
   channels: HorizontalGrid[] = [];
   selectedTabLink: string; // 当前选中的TopMenuLink
+  timeHourglassTitle = '距离拼团结束时间';
+  effectiveDate = new Date('2020-03-11');
+  expiredDate = new Date('2020-03-12');
 
   constructor(
     private route: ActivatedRoute,
