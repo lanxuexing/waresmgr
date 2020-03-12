@@ -21,3 +21,9 @@ GET {{API}}/banners
 # @name channels
 GET {{API}}/channels
 
+###
+
+# 首页广告
+# @name channels
+GET {{API}}/ads?category_like=hh-apls
+

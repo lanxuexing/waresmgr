@@ -7,6 +7,7 @@ import { ScrollableTab } from '@models/scrollable-tab';
 import { Observable } from 'rxjs';
 import { Tabs } from '@models/tabs';
 import { tabsConfig } from '@config/tsbs';
+import { Ad } from '@models/ad';
 
 @Injectable({
     providedIn: 'root'
@@ -30,6 +31,11 @@ export class HomeService {
     // 获取分类数据
     getHorizontalGridData(): Observable<HorizontalGrid[]> {
         return this.http.get<HorizontalGrid[]>(`${environment.host}/channels`);
+    }
+
+    // 获取广告数据
+    getAdData(category: string): Observable<Ad[]> {
+        return this.http.get<Ad[]>(`${environment.host}/ads?category_like=${category}`);
     }
 
     // 获取底部菜单

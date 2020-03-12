@@ -351,5 +351,47 @@
       "title": "全部",
       "link": "All"
     }
+  ],
+  "ads": [
+    {
+      "imageUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/89450/12/14751/81242/5e69e54bE146df550/0c63c453b521cf98.jpg",
+      "link": "",
+      "category": [
+        "hot-rec",
+        "hh-apls"
+      ]
+    },
+    {
+      "imageUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94103/19/14671/124121/5e68c57cE13b3a7b9/d7a565c8dcbd9da2.jpg!cr_1125x445_0_171!q70.jpg",
+      "link": "",
+      "category": [
+        "hot-rec",
+        "comp-off"
+      ]
+    },
+    {
+      "imageUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/103047/10/14138/90370/5e624e23E355df2df/aaa8cca9d1c80abd.jpg!cr_1125x445_0_171!q70.jpg",
+      "link": "",
+      "category": [
+        "hot-rec",
+        "beauty-skin"
+      ]
+    },
+    {
+      "imageUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/102202/40/14128/83765/5e6222e9E6a3fd5ca/9c0b53e02a7f9597.jpg!cr_1125x445_0_171!q70.jpg",
+      "link": "",
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ]
+    },
+    {
+      "imageUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/101952/1/14369/114013/5e63a513Ec6842fb2/57e6351fa829052f.jpg!cr_1125x445_0_171!q70.jpg",
+      "link": "",
+      "category": [
+        "hot-rec",
+        "fam-plan"
+      ]
+    }
   ]
 }
