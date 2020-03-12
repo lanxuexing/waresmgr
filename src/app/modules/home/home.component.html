@@ -4,4 +4,6 @@
     [selectedTabLink]="selectedTabLink$ | async"
     (selectChange)="onScrollableTabSelectChange($event)">
 </app-scrollable-tab>
-<router-outlet></router-outlet>
+<div class="main">
+    <router-outlet></router-outlet>
+</div>

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { Tabs } from '@models/tabs';
 import { tabsConfig } from '@config/tsbs';
 import { Ad } from '@models/ad';
+import { Goods } from '@models/goods';
 
 @Injectable({
     providedIn: 'root'
@@ -35,7 +36,16 @@ export class HomeService {
 
     // 获取广告数据
     getAdData(category: string): Observable<Ad[]> {
-        return this.http.get<Ad[]>(`${environment.host}/ads?category_like=${category}`);
+        return this.http.get<Ad[]>(`${environment.host}/ads`, {
+            params: { category_like: `${category}` }
+        });
+    }
+
+    // 获取商品数据
+    getGoodsData(category: string): Observable<Goods[]> {
+        return this.http.get<Goods[]>(`${environment.host}/goods`, {
+            params: { category_like: `${category}` }
+        });
     }
 
     // 获取底部菜单

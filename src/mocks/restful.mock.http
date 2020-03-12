@@ -24,6 +24,12 @@ GET {{API}}/channels
 ###
 
 # 首页广告
-# @name channels
+# @name ads
 GET {{API}}/ads?category_like=hh-apls
+
+###
+
+# 首页商品
+# @name goods
+GET {{API}}/goods?category_like=mobile-digi
 

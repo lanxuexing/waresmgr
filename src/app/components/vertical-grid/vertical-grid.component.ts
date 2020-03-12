@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-vertical-grid',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vertical-grid.component.scss']
 })
 export class VerticalGridComponent implements OnInit {
+  @Input() itemWidth = '4rem';
+  @Input() itemHeight = '4rem';
+  @Input() gridGap = '5px';
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void { }
+
+  // 计算属性：行高，响应式布局网格，auto-fill 用来在空间足够时尽可能的填充该位置，minmax 是最小和最大的宽度
+  get templateRows() {
+    return `minmax(auto-fill, ${this.itemHeight})`;
+  }
+
+  // 计算属性：列宽，CSS Grid Layout 的模版列表达式
+  get templateColumns() {
+    return `repeat(auto-fill, minmax(${this.itemWidth}, 1fr))`;
   }
 
 }

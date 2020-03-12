@@ -26,7 +26,14 @@
 <div class="ad-cintainer" *ngIf="(ad$ | async) as ad">
     <img [src]="ad.imageUrl" alt="">
 </div>
-<app-vertical-grid></app-vertical-grid>
+<!-- 列网格商品展示 -->
+<app-vertical-grid
+    [itemWidth]="'10rem'">
+    <div class="goods-container" *ngFor="let item of goods$ | async">
+        <img [src]="item.imageUrl" alt="">
+        <span>{{item.title}}</span>
+    </div> 
+</app-vertical-grid>
 <!-- 倒计时 -->
 <app-time-hourglass
     [title]="timeHourglassTitle"

@@ -393,5 +393,97 @@
         "fam-plan"
       ]
     }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "title": "Apple 苹果 iPhone8 Plus 手机 金色 全网通64G",
+      "imageUrl": "https://img13.360buyimg.com/evalpic/s370x370_jfs/t1/89716/26/14557/97482/5e661202E3334edaa/bd0aed759420bd39.jpg!q70.dpg",
+      "price": 4259.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "2人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/women/59.jpg",
+        "https://randomuser.me/api/portraits/women/22.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "华为麦芒8手机 宝石蓝 全网通(6G 128G)",
+      "imageUrl": "https://img14.360buyimg.com/evalpic/s370x370_jfs/t1/54119/30/4375/85279/5d202266E2067fffa/8565b34402f27c76.jpg!q70.dpg",
+      "price": 1399.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "2人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/women/75.jpg",
+        "https://randomuser.me/api/portraits/women/32.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "华为nova5i 手机 幻夜黑 全网通（6G+128G）",
+      "imageUrl": "https://img13.360buyimg.com/evalpic/s370x370_jfs/t1/60922/35/7429/92863/5d58b27aEee9823fc/30311e2a8caf718a.jpg!q70.dpg",
+      "price": 1799.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "3人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/women/73.jpg",
+        "https://randomuser.me/api/portraits/women/74.jpg",
+        "https://randomuser.me/api/portraits/women/21.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "华为 荣耀20i 手机 3200万AI自拍 后置超广角AI三摄 蓝色 6GB+64GB",
+      "imageUrl": "https://img12.360buyimg.com/evalpic/s370x370_jfs/t1/74106/11/5678/96968/5d3dd13bE8f92a0f9/2379cad843ce08f5.jpg!q70.dpg",
+      "price": 1199.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "1人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/women/55.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "华为（HUAWEI）荣耀20青春版 全网通版移动联通电信4G 双卡双待 幻夜黑 (6GB 64GB)",
+      "imageUrl": "https://img14.360buyimg.com/evalpic/s370x370_jfs/t1/77241/12/16331/62864/5ddb5608E40cbefd3/cdc0aef2583b0988.jpg!q70.dpg",
+      "price": 1399.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "2人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/men/46.jpg",
+        "https://randomuser.me/api/portraits/men/32.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "华为（HUAWEI） 华为畅享9 plus手机 宝石蓝 4GB+128GB",
+      "imageUrl": "https://img14.360buyimg.com/evalpic/s370x370_jfs/t1/93295/32/5710/89461/5def14d5E7ab9cab2/0031bb75811317b9.jpg!q70.dpg",
+      "price": 1399.00,
+      "category": [
+        "hot-rec",
+        "mobile-digi"
+      ],
+      "priceDesc": "2人已拼",
+      "buyerAvatars": [
+        "https://randomuser.me/api/portraits/men/81.jpg",
+        "https://randomuser.me/api/portraits/women/60.jpg"
+      ]
+    }
   ]
 }

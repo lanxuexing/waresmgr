@@ -7,6 +7,7 @@ import { HomeService } from '@services/home';
 import { Observable } from 'rxjs';
 import { map, switchMap, filter } from 'rxjs/operators';
 import { Ad } from '@models/ad';
+import { Goods } from '@models/goods';
 
 @AutoUnsubscribe()
 @Component({
@@ -22,6 +23,7 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
   effectiveDate = new Date('2020-03-11');
   expiredDate = new Date('2020-03-12');
   ad$: Observable<Ad>; // 广告
+  goods$: Observable<Goods[]>; // 商品
 
   constructor(
     private route: ActivatedRoute,
@@ -39,6 +41,10 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
       switchMap(tabLink => this.homeService.getAdData(tabLink)),
       filter(ads => ads.length > 0),
       map(ads => ads[0])
+    );
+    this.goods$ = this.selectedTabLink$.pipe(
+      switchMap(tabLink => this.homeService.getGoodsData(tabLink)),
+      filter(ads => ads.length > 0)
     );
   }
 
