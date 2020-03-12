@@ -6,6 +6,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('@modules/home/home.module').then(m => m.HomeModule) },
   { path: 'recommend', loadChildren: () => import('@modules/recommend/recommend.module').then(m => m.RecommendModule) },
+  { path: 'category', loadChildren: () => import('@modules/category/category.module').then(m => m.CategoryModule) },
+  { path: 'chat', loadChildren: () => import('@modules/chat/chat.module').then(m => m.ChatModule) },
+  { path: 'my', loadChildren: () => import('@modules/my/my.module').then(m => m.MyModule) },
 ];
 
 @NgModule({

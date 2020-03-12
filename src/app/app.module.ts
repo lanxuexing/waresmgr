@@ -6,11 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor, ResponseInterceptor } from '@interceptors/index';
+import { MyComponent } from './modules/my/my.component';
+import { ChatComponent } from './modules/chat/chat.component';
+import { CategoryComponent } from './modules/category/category.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyComponent,
+    ChatComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
