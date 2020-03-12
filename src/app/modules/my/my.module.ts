@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { MyComponent } from '@modules/my';
 import { MyRoutingModule } from '@modules/my/my.routing';
+import { ComponentsModule } from '@components/components.module';
 
-const COMMMON = [
+const COMMON = [
     MyComponent
 ];
 
 @NgModule({
     declarations: [
-        ...COMMMON
+        ...COMMON
     ],
     imports: [
+        ComponentsModule,
         MyRoutingModule
     ]
 })
