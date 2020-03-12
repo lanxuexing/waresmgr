@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
-import { ScrollableTab } from '@models/index';
+import { ScrollableTab } from '@models/scrollable-tab';
 
 @Component({
   selector: 'app-scrollable-tab',

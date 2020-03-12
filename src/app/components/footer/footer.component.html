@@ -1,0 +1,18 @@
+<!-- 滚动菜单 -->
+<app-horizontal-grid
+    [cols]="5"
+    [displayCols]="5">
+    <div
+    appGridItem
+    *ngFor="let item of tabItems;let idx = index;">
+        <img
+            appGridItemImage
+            [src]="selectedIndex === idx ? item.selectedIcon : item.icon"
+            [alt]="item.link"
+            (click)="toggleSelectedIndex(item, idx)">
+        <span
+            appGridItemTitle>
+            {{item.title}}
+        </span>
+    </div>
+</app-horizontal-grid>

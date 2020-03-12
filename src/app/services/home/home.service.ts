@@ -5,6 +5,8 @@ import { Carousel } from '@models/carousel';
 import { HorizontalGrid } from '@models/horizontal-grid';
 import { ScrollableTab } from '@models/scrollable-tab';
 import { Observable } from 'rxjs';
+import { Tabs } from '@models/tabs';
+import { tabsConfig } from '@config/tsbs';
 
 @Injectable({
     providedIn: 'root'
@@ -28,6 +30,11 @@ export class HomeService {
     // 获取分类数据
     getHorizontalGridData(): Observable<HorizontalGrid[]> {
         return this.http.get<HorizontalGrid[]>(`${environment.host}/channels`);
+    }
+
+    // 获取底部菜单
+    getTabsData(): Tabs[] {
+        return tabsConfig;
     }
 
 }

@@ -16,9 +16,7 @@ export class GridItemImageDirective implements OnInit {
 
   // HostListener 绑定宿主的事件
   @HostListener('click', ['$event'])
-  onClick(event: Event) {
-    console.log('appGridItemImage指令点击事件: ', event.target);
-  }
+  onClick(event: Event) { }
 
   ngOnInit(): void {
     // 第一种写法:

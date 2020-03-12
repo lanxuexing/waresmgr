@@ -22,6 +22,9 @@
       "@environments/*": [
         "./src/environments/*"
       ],
+      "@config/*": [
+        "./src/app/configs/*"
+      ],
       "@components/*": [
         "./src/app/components/*"
       ],

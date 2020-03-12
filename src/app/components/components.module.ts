@@ -6,6 +6,7 @@ import { HorizontalGridComponent } from '@components/horizontal-grid';
 import { ScrollableTabComponent } from '@components/scrollable-tab';
 import { DirectivesModule } from '@directives/index';
 import { TimeHourglassComponent } from '@components/time-hourglass';
+import { FooterComponent } from '@components/footer';
 
 
 const COMMON = [
@@ -13,6 +14,7 @@ const COMMON = [
   CarouselComponent,
   HorizontalGridComponent,
   TimeHourglassComponent,
+  FooterComponent,
 ];
 
 const MODULE = [

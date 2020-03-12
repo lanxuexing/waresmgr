@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutoUnsubscribe } from '@decorators/rxjs';
-import { ScrollableTab } from '@models/index';
+import { ScrollableTab } from '@models/scrollable-tab';
 import { HomeService } from '@services/home';
 
 @AutoUnsubscribe()
@@ -25,10 +25,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   // 滚动菜单点击事件
-  onScrollableTabSelectChange(topMenu: ScrollableTab) {
+  onScrollableTabSelectChange(topMenu: ScrollableTab): void {
     console.log('菜单点击了...', topMenu);
     this.router.navigate(['home', topMenu.link]);
   }
+
 
   ngOnDestroy(): void { }
 

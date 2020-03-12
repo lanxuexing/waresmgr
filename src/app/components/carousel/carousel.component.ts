@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, Renderer2, ViewChild, ChangeDetectionStrategy } from '@angular/core';
-import { Carousel } from '@models/index';
+import { Carousel } from '@models/carousel';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
