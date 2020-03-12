@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
 
   // 底部菜单点击事件
   handleTabSelected(tab: Tabs): void {
+    console.log('导航: ', tab);
     this.router.navigate([tab.link]);
   }
 

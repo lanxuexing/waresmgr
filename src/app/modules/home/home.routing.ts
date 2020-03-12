@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@modules/home';
@@ -12,11 +11,11 @@ const routes: Routes = [
             { path: '', redirectTo: 'hot-rec', pathMatch: 'full' },
             { path: ':tabLink', component: HomeDetailComponent }
         ]
-    },
+    }
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
 export class HomeRoutingModule {}

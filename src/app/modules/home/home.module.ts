@@ -16,8 +16,6 @@ const COMMON = [
     imports: [
         ComponentsModule,
         HomeRoutingModule,
-    ],
-    exports: [],
-    providers: [],
+    ]
 })
 export class HomeModule {}

@@ -24,7 +24,6 @@ export class HomeDetailComponent implements OnInit, OnDestroy {
     private homeService: HomeService
   ) {
     this.route.paramMap.subscribe(params => {
-      console.log('路由参数: ', params);
       this.selectedTabLink = params.get('tabLink');
     });
   }
