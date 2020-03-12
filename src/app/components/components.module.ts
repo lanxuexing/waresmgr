@@ -7,6 +7,7 @@ import { ScrollableTabComponent } from '@components/scrollable-tab';
 import { DirectivesModule } from '@directives/index';
 import { TimeHourglassComponent } from '@components/time-hourglass';
 import { FooterComponent } from '@components/footer';
+import { VerticalGridComponent } from '@components/vertical-grid';
 
 
 const COMMON = [
@@ -15,6 +16,7 @@ const COMMON = [
   HorizontalGridComponent,
   TimeHourglassComponent,
   FooterComponent,
+  VerticalGridComponent,
 ];
 
 const MODULE = [
