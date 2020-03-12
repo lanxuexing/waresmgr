@@ -13,15 +13,14 @@ export class ScrollableTabComponent {
   @Input() titleActiveColor = 'red'; // 选中时候的文字颜色
   @Input() indicatorColor = 'black'; // 指示器默认颜色
   @Input() indicatorActiveColor = 'red'; // 指示器默认颜色
-  @Input() selectIndex = 0; // 当前选中菜单
+  @Input() selectedTabLink: string; // 当前选中菜单
   @Input() menus: ScrollableTab[] = []; // 菜单源数据
   @Output() selectChange: EventEmitter<ScrollableTab> = new EventEmitter(); // 菜单选中数据
 
   constructor() { }
 
   // 监听菜单选中事件
-  onSelect(item: ScrollableTab, index: number): void {
-    this.selectIndex = index;
+  onSelect(item: ScrollableTab): void {
     this.selectChange.emit(item);
   }
 
