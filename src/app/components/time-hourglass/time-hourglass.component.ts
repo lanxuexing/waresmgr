@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { interval, Observable } from 'rxjs';
 import { map, takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-time-hourglass',
   templateUrl: './time-hourglass.component.html',
-  styleUrls: ['./time-hourglass.component.scss']
+  styleUrls: ['./time-hourglass.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TimeHourglassComponent implements OnInit {
   @Input() effectiveDate: Date; // 有效时间

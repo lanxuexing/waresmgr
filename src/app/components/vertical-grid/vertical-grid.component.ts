@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-vertical-grid',
   templateUrl: './vertical-grid.component.html',
-  styleUrls: ['./vertical-grid.component.scss']
+  styleUrls: ['./vertical-grid.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VerticalGridComponent implements OnInit {
   @Input() itemWidth = '4rem';

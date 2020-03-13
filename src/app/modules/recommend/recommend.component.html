@@ -1,1 +1,14 @@
-<p>recommend works!</p>
+<!-- 广告容器 -->
+<div class="ad-cintainer" *ngIf="(ad$ | async) as ad">
+    <img [src]="ad.imageUrl" alt="">
+</div>
+<!-- 列网格商品展示 -->
+<app-vertical-grid
+    [itemWidth]="'10rem'"
+    [itemHeight]="'10rem'">
+    <app-goods-tile
+        *ngFor="let item of goods$ | async"
+        [good]="item"
+        [routerLink]="['/goods', item.id]">
+    </app-goods-tile>
+</app-vertical-grid>

@@ -1,11 +1,13 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from '@components/components.module';
 import { RequestInterceptor, ResponseInterceptor } from '@interceptors/index';
 import { PublicModule } from '@public/public.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import localeZh from '@angular/common/locales/zh-Hans';
+import { registerLocaleData } from '@angular/common';
 
 
 @NgModule({
@@ -28,8 +30,16 @@ import { AppComponent } from './app.component';
       provide: HTTP_INTERCEPTORS,
       useClass: ResponseInterceptor,
       multi: true
+    },
+    {
+      provide: LOCALE_ID,
+      useValue: 'zh-Hans'
     }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeZh, 'zh');
+  }
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <img [src]="good.imageUrl" alt="" class="good-image">
+    <div class="good-title">{{good.title | slice: 0:13}}</div>
+    <div class="good-category">
+        <span
+            appCategory
+            *ngFor="let item of good.category">
+            {{item}}
+        </span>
+    </div>
+    <div class="good-price">
+       <span class="price-setion">
+           <h3 class="price">{{good.price | currency: 'CNY'}}</h3>
+        </span>
+       <span class="price-desc">{{good.priceDesc}}</span>
+       <span class="price-more">发现</span>
+    </div>
+</div>
