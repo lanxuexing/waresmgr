@@ -1,1 +1,10 @@
+<!-- 导航按钮 -->
 <app-back-button></app-back-button>
+<!-- 商品详情 -->
+<ng-container *ngIf="detail$ | async as detail">
+    <!-- 轮播图 -->
+    <app-carousel
+        [timeInterval]="0"
+        [sliders]="detail?.goodsSpecsImage">
+    </app-carousel>
+</ng-container>

@@ -33,3 +33,9 @@ GET {{API}}/ads?category_like=hh-apls
 # @name goods
 GET {{API}}/goods?category_like=mobile-digi
 
+###
+
+# 商品详情
+# @name details
+GET {{API}}/details?goods.id=1
+

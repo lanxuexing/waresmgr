@@ -24,6 +24,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
   ) { }
 
   ngAfterViewInit(): void {
+    if (this.timeInterval <= 0) { return; }
     this.intervalSubs = interval(this.timeInterval).subscribe(_ => {
       this.rd.setProperty(
         this.imgSlider.nativeElement,
