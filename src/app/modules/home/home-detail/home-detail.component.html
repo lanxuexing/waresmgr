@@ -32,7 +32,7 @@
     <app-goods-card
         *ngFor="let item of goods$ | async"
         [good]="item"
-        [routerLink]="['/goods', item.id]">
+        [routerLink]="['/detail', item.id]">
     </app-goods-card>
 </app-vertical-grid>
 <!-- 倒计时 -->

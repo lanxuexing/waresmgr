@@ -9,6 +9,6 @@
     <app-goods-tile
         *ngFor="let item of goods$ | async"
         [good]="item"
-        [routerLink]="['/goods', item.id]">
+        [routerLink]="['/detail', item.id]">
     </app-goods-tile>
 </app-vertical-grid>

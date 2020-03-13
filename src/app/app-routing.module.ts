@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'category', loadChildren: () => import('@modules/category/category.module').then(m => m.CategoryModule) },
   { path: 'chat', loadChildren: () => import('@modules/chat/chat.module').then(m => m.ChatModule) },
   { path: 'my', loadChildren: () => import('@modules/my/my.module').then(m => m.MyModule) },
+  { path: 'detail', loadChildren: () => import('@modules/detail/detail.module').then(m => m.DetailModule) },
 ];
 
 @NgModule({

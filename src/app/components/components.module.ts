@@ -9,7 +9,7 @@ import { TimeHourglassComponent } from '@components/time-hourglass';
 import { FooterComponent } from '@components/footer';
 import { VerticalGridComponent } from '@components/vertical-grid';
 import { GoodsCardComponent } from '@components/goods-card';
-import { GoodsTileComponent } from './goods-tile/goods-tile.component';
+import { GoodsTileComponent } from '@components/goods-tile';
 
 
 const COMMON = [
