@@ -11,6 +11,7 @@ import { VerticalGridComponent } from '@components/vertical-grid';
 import { GoodsCardComponent } from '@components/goods-card';
 import { GoodsTileComponent } from '@components/goods-tile';
 import { BackButtonComponent } from '@components/back-button';
+import { DialogComponent } from '@components/dialog';
 
 
 const COMMON = [
@@ -23,6 +24,7 @@ const COMMON = [
   GoodsCardComponent,
   GoodsTileComponent,
   BackButtonComponent,
+  DialogComponent,
 ];
 
 const MODULE = [
