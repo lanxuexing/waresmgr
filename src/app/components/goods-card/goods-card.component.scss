@@ -1,0 +1,28 @@
+:host {
+    padding: 0 0.5rem;
+    background-color: #fff;
+    .container {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 3rem 1fr 1rem 2rem;
+        grid-gap: 5px;
+        grid-template-areas: 'image title' 'image .' 'image category' 'image price';
+        place-content: stretch;
+        place-items: stretch;
+        .good-image {
+            grid-area: image;
+            object-fit: contain;
+            width: 9rem;
+            height: 9rem;
+        }
+        .good-title {
+            grid-area: title;
+        }
+        .good-category {
+            grid-area: category;
+        }
+        .good-price {
+            grid-area: price;
+        }
+    }
+}

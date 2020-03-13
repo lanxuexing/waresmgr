@@ -28,11 +28,15 @@
 </div>
 <!-- 列网格商品展示 -->
 <app-vertical-grid
-    [itemWidth]="'10rem'">
-    <div class="goods-container" *ngFor="let item of goods$ | async">
+    [itemWidth]="'20rem'">
+    <!-- <div class="goods-container" *ngFor="let item of goods$ | async">
         <img [src]="item.imageUrl" alt="">
         <span>{{item.title}}</span>
-    </div> 
+    </div>  -->
+    <app-goods-card
+        *ngFor="let item of goods$ | async"
+        [good]="item">
+    </app-goods-card>
 </app-vertical-grid>
 <!-- 倒计时 -->
 <app-time-hourglass

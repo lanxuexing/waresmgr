@@ -1,0 +1,8 @@
+<div class="container">
+    <img [src]="good.imageUrl" alt="" class="good-image">
+    <div class="good-title">{{good.title}}</div>
+    <div class="good-category">
+        <span *ngFor="let item of good.category">{{item}}</span>
+    </div>
+    <div class="good-price">{{good.price}}</div>
+</div>

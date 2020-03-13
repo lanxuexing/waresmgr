@@ -8,6 +8,7 @@ import { DirectivesModule } from '@directives/index';
 import { TimeHourglassComponent } from '@components/time-hourglass';
 import { FooterComponent } from '@components/footer';
 import { VerticalGridComponent } from '@components/vertical-grid';
+import { GoodsCardComponent } from '@components/goods-card';
 
 
 const COMMON = [
@@ -17,6 +18,7 @@ const COMMON = [
   TimeHourglassComponent,
   FooterComponent,
   VerticalGridComponent,
+  GoodsCardComponent,
 ];
 
 const MODULE = [
