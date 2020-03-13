@@ -11,4 +11,38 @@
         top: 1.2rem;
         z-index: 2000;
     }
+    .price-section {
+        display: grid;
+        // grid-auto-flow: column;
+        grid-template-columns: 40% 30% 1fr;
+        place-content: start;
+        place-items: baseline;
+        grid-gap: 3px;
+        margin: 0 5px;
+        .title, .coupon, .guarantee {
+            grid-column: 1/4;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #E02F29;
+        }
+        .listPrice {
+            color: #3F3F3F;
+            text-decoration: line-through;
+        }
+        .sales-count {
+            justify-self: end;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 3px 0;
+        }
+        .guarantee {
+            color: darkgrey;
+            font-size: 1.1rem;
+            margin: 3px 0;
+        }
+    }
 }

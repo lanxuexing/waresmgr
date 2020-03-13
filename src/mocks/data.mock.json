@@ -504,9 +504,9 @@
           "https://randomuser.me/api/portraits/women/60.jpg"
         ]
       },
-      "name": "华为（HUAWEI） 华为畅享9 plus手机 宝石蓝 4GB+128GB",
-      "price": 1399.00,
-      "listPrice": 999.00,
+      "name": "宝石蓝 4GB+128GB",
+      "price": 999.00,
+      "listPrice": 1399.00,
       "goodsSpecsImage": [
         {
           "imgUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/103607/38/13259/157756/5e5628fbE2137b5ca/30aee4d8fc38790a.jpg!cr_1125x445_0_171!q70.jpg",
@@ -516,6 +516,19 @@
           "imgUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/95842/38/12546/80187/5e4ba3e7E09e0da3b/92aac67aefdf6b6f.jpg!cr_1125x445_0_171!q70.jpg",
           "caption": "大牌空调聚惠"
         }
+      ],
+      "coupon": [
+        "返现",
+        "店铺内消费满1000元减200元"
+      ],
+      "guarantee": [
+        "全场包邮",
+        ".",
+        "七天退换",
+        ".",
+        "48小时发货",
+        ".",
+        "假一赔十"
       ]
     },
     {
@@ -535,9 +548,9 @@
           "https://randomuser.me/api/portraits/women/22.jpg"
         ]
       },
-      "name": "Apple 苹果 iPhone8 Plus 手机 金色 全网通64G",
-      "price": 4259.00,
-      "listPrice": 3999.00,
+      "name": "金色 全网通64G",
+      "price": 3999.00,
+      "listPrice": 4259.00,
       "goodsSpecsImage": [
         {
           "imgUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/92879/2/13685/128557/5e5a1932E2990f3c1/6b4d6a8083f87fcc.jpg!cr_1125x445_0_171!q70.jpg",
@@ -547,6 +560,63 @@
           "imgUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94711/36/13532/88700/5e5a126aE07ebc5ed/4ba19b99333cb6ce.jpg!cr_1125x445_0_171!q70.jpg",
           "caption": "冰洗宠你，礼物拿去"
         }
+      ],
+      "coupon": [
+        "返现",
+        "店铺内消费满1000元减200元"
+      ],
+      "guarantee": [
+        "全场包邮",
+        ".",
+        "七天退换",
+        ".",
+        "48小时发货",
+        ".",
+        "假一赔十"
+      ]
+    },
+    {
+      "id": 3,
+      "goods": {
+        "id": 6,
+        "title": "华为（HUAWEI）荣耀20青春版 全网通版移动联通电信4G 双卡双待 幻夜黑 (6GB 64GB)",
+        "imageUrl": "https://img14.360buyimg.com/evalpic/s370x370_jfs/t1/77241/12/16331/62864/5ddb5608E40cbefd3/cdc0aef2583b0988.jpg!q70.dpg",
+        "price": 1399.00,
+        "category": [
+          "hot-rec",
+          "comp-off"
+        ],
+        "priceDesc": "2人已拼",
+        "buyerAvatars": [
+          "https://randomuser.me/api/portraits/men/46.jpg",
+          "https://randomuser.me/api/portraits/men/32.jpg"
+        ]
+      },
+      "name": "双卡双待 幻夜黑 (6GB 64GB)",
+      "price": 999.00,
+      "listPrice": 1399.00,
+      "goodsSpecsImage": [
+        {
+          "imgUrl": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/95014/10/11781/81228/5e3bb21aE7fbb83b8/dc00b537e9c11dd1.jpg!cr_1125x445_0_171!q70.jpg",
+          "caption": "天然翡翠"
+        },
+        {
+          "imgUrl": "https://imgcps.jd.com/ling4/65788105779/5a6J5YWo56ys5LiA/54m55q6K5pe25pyf5L-d5oqk5aW96Ieq5bex/p-5d91a4f642dd5b7c7d52cbe1/288b807a/cr/s1125x690/q70.jpg",
+          "caption": "安全防护，保护自己"
+        }
+      ],
+      "coupon": [
+        "返现",
+        "店铺内消费满1000元减200元"
+      ],
+      "guarantee": [
+        "全场包邮",
+        ".",
+        "七天退换",
+        ".",
+        "48小时发货",
+        ".",
+        "假一赔十"
       ]
     }
   ]

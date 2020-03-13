@@ -11,7 +11,7 @@ import { filter, map, switchMap, tap } from 'rxjs/operators';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  detail$: Observable<Detail>; // 商品详情
+  detail$: Observable<Detail[]>; // 商品详情
   selectedIndex = 0; // 当前选中的商品规格
 
   constructor(

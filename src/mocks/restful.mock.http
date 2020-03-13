@@ -37,5 +37,5 @@ GET {{API}}/goods?category_like=mobile-digi
 
 # 商品详情
 # @name details
-GET {{API}}/details?goods.id=1
+GET {{API}}/details?goods.id=6
 

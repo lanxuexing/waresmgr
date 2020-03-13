@@ -8,4 +8,6 @@ export interface Detail {
     price: number;
     listPrice: number;
     goodsSpecsImage: Carousel[];
+    coupon: string[];
+    guarantee: string[];
 }

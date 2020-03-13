@@ -8,4 +8,5 @@ export class CateGoryDirective {
     @Input() @HostBinding('style.color') categoryColor = '#CA516A';
     @Input() @HostBinding('style.font-size') categoryFontSize = '0.8rem';
     @Input() @HostBinding('style.padding') categoryPadding = '3px';
+    @Input() @HostBinding('style.border-radius') categoryBorderRadius = '0';
 }
