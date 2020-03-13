@@ -2,7 +2,25 @@
     <img [src]="good.imageUrl" alt="" class="good-image">
     <div class="good-title">{{good.title}}</div>
     <div class="good-category">
-        <span *ngFor="let item of good.category">{{item}}</span>
+        <span
+            appCategory
+            *ngFor="let item of good.category">
+            {{item}}
+        </span>
     </div>
-    <div class="good-price">{{good.price}}</div>
+    <div class="good-price">
+       <span class="price-setion">
+           <b>&yen;</b>
+           <h3 class="price">{{good.price}}</h3>
+        </span>
+       <span class="price-desc">{{good.priceDesc}}</span>
+       <span class="price-avatar">
+           <img
+                appAvatar
+                *ngFor="let item of good.buyerAvatars | slice: 0:2;let idx = index;"
+                [ngStyle]="{'left': -idx * 10 + 'px', 'z-index': 1000 - idx}"
+                [src]="item"
+                alt="">
+       </span>
+    </div>
 </div>

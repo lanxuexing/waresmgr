@@ -29,13 +29,10 @@
 <!-- 列网格商品展示 -->
 <app-vertical-grid
     [itemWidth]="'20rem'">
-    <!-- <div class="goods-container" *ngFor="let item of goods$ | async">
-        <img [src]="item.imageUrl" alt="">
-        <span>{{item.title}}</span>
-    </div>  -->
     <app-goods-card
         *ngFor="let item of goods$ | async"
-        [good]="item">
+        [good]="item"
+        [routerLink]="['/goods', item.id]">
     </app-goods-card>
 </app-vertical-grid>
 <!-- 倒计时 -->
