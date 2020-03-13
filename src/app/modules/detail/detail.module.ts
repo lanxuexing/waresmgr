@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { DetailComponent } from '@modules/detail';
 import { DetailRoutingModule } from '@modules/detail/detail.routing';
+import { ComponentsModule } from '@components/components.module';
 
 const COMMON = [
     DetailComponent
@@ -11,6 +12,7 @@ const COMMON = [
         ...COMMON
     ],
     imports: [
+        ComponentsModule,
         DetailRoutingModule
     ]
 })

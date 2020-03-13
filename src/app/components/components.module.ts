@@ -10,6 +10,7 @@ import { FooterComponent } from '@components/footer';
 import { VerticalGridComponent } from '@components/vertical-grid';
 import { GoodsCardComponent } from '@components/goods-card';
 import { GoodsTileComponent } from '@components/goods-tile';
+import { BackButtonComponent } from '@components/back-button';
 
 
 const COMMON = [
@@ -21,6 +22,7 @@ const COMMON = [
   VerticalGridComponent,
   GoodsCardComponent,
   GoodsTileComponent,
+  BackButtonComponent,
 ];
 
 const MODULE = [

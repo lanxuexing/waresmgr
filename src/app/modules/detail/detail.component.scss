@@ -5,4 +5,10 @@
     flex: 1;
     overflow-x: hidden;
     overflow-y: auto;
+    app-back-button {
+        position: fixed;
+        left: 1rem;
+        top: 1.2rem;
+        z-index: 2000;
+    }
 }
