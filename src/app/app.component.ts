@@ -50,4 +50,7 @@ export class AppComponent implements OnInit {
       : 0;
   }
 
+  // 移除对话框
+  removeDialog(): void { }
+
 }
