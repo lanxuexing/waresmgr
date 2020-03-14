@@ -51,4 +51,39 @@
         padding: 0.4rem 0;
         background-color: #F5F5F5;
     }
+    .toolbar {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        min-height: 60px;
+        background-color: #fff;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-button {
+            font-size: 0.8rem;
+            color: #3f3f3f;
+            flex: 1 1 10%;
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        .direct-buy {
+            background: #e9aeaa;
+            color: #fff;
+            flex: 1 1 28%;
+        }
+        .group-buy {
+            background: #e02f29;
+            color: #fff;
+            flex: 1 1 35%;
+        }
+    }
 }

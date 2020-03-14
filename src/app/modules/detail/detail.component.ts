@@ -27,4 +27,10 @@ export class DetailComponent implements OnInit {
     );
   }
 
+  // 直接购买
+  handleDirectBuy(item: Detail): void { }
+
+  // 发起拼单
+  handleGroupBuy(item: Detail): void { }
+
 }
