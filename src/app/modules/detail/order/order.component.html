@@ -1,1 +1,64 @@
-<p>order works!</p>
+<div class="container" *ngIf="order$ | async as order">
+    <div class="title-bar">
+        <app-back-button [float]="false"></app-back-button>
+        <span>确认订单</span>
+    </div>
+    <div class="content">
+        <div class="address-bar">
+            <img
+                class="location"
+                src="assets/images/icons/location.png"
+                alt="">
+            <div class="name-and-mobile">
+                <span class="name">紫萱</span>
+                <span class="mobile">13888888888</span>
+            </div>
+            <div class="address">
+                北京市海淀区xxx街道xxx号xxx大厦
+            </div>
+            <img
+                class="more"
+                src="assets/images/icons/navigate_next.png"
+                alt="">
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="shop">
+            <img src="assets/images/icons/brand.png" alt="">
+            <span>xxx专营店</span>
+        </div>
+        <div class="goods-bar">
+            <img
+                class="goods-image"
+                [src]="order.detail.goodsSpecsImage[0].imgUrl"
+                alt="">
+            <div class="goods-name">{{order.detail.goods.title}}</div>
+            <div class="goods-spec">{{order.detail.name}}</div>
+            <div class="goods-price">
+                <span>{{order.detail.price | currency: 'CNY'}}/件</span>
+                <span class="price-condition">退货包运费</span>
+            </div>
+        </div>
+        <app-goods-amount
+            [counter]="order.count"
+            (counterchange)="handelCounterchange($event)">
+        </app-goods-amount>
+        <app-payment></app-payment>
+    </div>
+    <div class="toolbar">
+        <div class="total-price">
+            <span>实付款：</span>
+            <span class="price-section">{{totalPrice$ | async | currency: 'CNY'}}</span>
+            <span class="price-condition">&nbsp;免邮费</span>
+        </div>
+        <div class="pay" (click)="handlePay()">
+            <div>立即支付</div>
+        </div>
+    </div>
+</div> 
