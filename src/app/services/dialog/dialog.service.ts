@@ -100,12 +100,12 @@ export class DialogService {
     }
 
     // 保存对话框的数据
-    public saveData(data: object | null): void {
+    public saveDialogData(data: object | null): void {
         this.data$.next(data);
     }
 
     // 获取对话框数据
-    public getData(): Observable<object | null> {
+    public getDialogData(): Observable<object | null> {
         return this.data$.asObservable();
     }
 

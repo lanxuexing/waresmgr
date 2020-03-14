@@ -41,7 +41,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     const top = 40;
     const formSubmitted = new EventEmitter();
     formSubmitted.subscribe((ev: {detail: Detail, count: number}) => {
-      this.dialogService.saveData(ev);
+      this.dialogService.saveDialogData(ev);
       this.router.navigate(['/order']);
     });
     const selected = new EventEmitter();
