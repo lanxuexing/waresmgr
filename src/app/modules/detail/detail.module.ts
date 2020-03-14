@@ -7,6 +7,7 @@ import { FightComponent } from '@modules/detail/fight';
 import { SnapUpComponent } from '@modules/detail/snap-up';
 import { GoodsAmountComponent } from '@modules/detail/goods-amount';
 import { ModalComponent } from '@modules/detail/modal';
+import { OrderComponent } from '@modules/detail/order';
 
 const COMMON = [
     DetailComponent,
@@ -14,6 +15,7 @@ const COMMON = [
     SnapUpComponent,
     GoodsAmountComponent,
     ModalComponent,
+    OrderComponent,
 ];
 
 @NgModule({
