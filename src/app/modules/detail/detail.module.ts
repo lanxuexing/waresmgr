@@ -1,16 +1,19 @@
+import { DialogService } from './../../services/dialog/dialog.service';
 import { NgModule } from '@angular/core';
 import { DetailComponent } from '@modules/detail';
 import { DetailRoutingModule } from '@modules/detail/detail.routing';
 import { ComponentsModule } from '@components/components.module';
-import { OrderComponent } from '@modules/detail/order';
 import { FightComponent } from '@modules/detail/fight';
 import { SnapUpComponent } from '@modules/detail/snap-up';
+import { GoodsAmountComponent } from '@modules/detail/goods-amount';
+import { ModalComponent } from '@modules/detail/modal';
 
 const COMMON = [
     DetailComponent,
-    OrderComponent,
     FightComponent,
     SnapUpComponent,
+    GoodsAmountComponent,
+    ModalComponent,
 ];
 
 @NgModule({
@@ -20,6 +23,13 @@ const COMMON = [
     imports: [
         ComponentsModule,
         DetailRoutingModule
+    ],
+    entryComponents: [
+        ModalComponent,
+        GoodsAmountComponent
+    ],
+    providers: [
+        DialogService
     ]
 })
 export class DetailModule { }

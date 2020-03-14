@@ -32,7 +32,7 @@ p {
     display: block;
 }
 
-#overlay {
+#overlay-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,11 +46,11 @@ p {
 #dialog-container {
     position: fixed;
     top: 50%;
-    left: 0;
+    left: 50%;
     width: 100%;
     background-color: #fff;
-    margin-left: 0;
+    margin-left: -50%;
     text-align: center;
-    box-shadow: 0 0 2px 1px;
+    box-shadow: 0 0 2px 1px black;
     z-index: 3000;
 }

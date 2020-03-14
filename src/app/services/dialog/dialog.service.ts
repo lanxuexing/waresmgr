@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Inject, Injectable, Injector, Type } from '@angular/core';
 import { Dialog } from '@models/dialog';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -9,6 +10,7 @@ export class DialogService {
     private childComponentRef: ComponentRef<any>;
     private readonly dialogElementId = 'dialog-container';
     private readonly overlayElementId = 'overlay-container';
+    private data$ = new BehaviorSubject<object | null>(null);
 
     constructor(
         private resolver: ComponentFactoryResolver, // 工厂解析器，用于得到任何工厂（Angular里的任何一个组件都是通过工厂造出来的）
@@ -62,7 +64,15 @@ export class DialogService {
     // 打开对话框
     public openDialog(component: Type<any>, config: Dialog): void {
         this.appendComponentTo(this.dialogElementId, component, config);
+        if (config.position) {
+            const element = this.document.getElementById(this.dialogElementId);
+            element.style.width = config.position.width;
+            element.style.height = config.position.height;
+            element.style.top = config.position.top;
+            element.style.left = config.position.left;
+        }
         this.toggleAll();
+        this.data$.next(null);
     }
 
     public toggleAll(): void {
@@ -87,6 +97,16 @@ export class DialogService {
     public closeDialog(): void {
         this.removeComponent();
         this.toggleAll();
+    }
+
+    // 保存对话框的数据
+    public saveData(data: object | null): void {
+        this.data$.next(data);
+    }
+
+    // 获取对话框数据
+    public getData(): Observable<object | null> {
+        return this.data$.asObservable();
     }
 
 }

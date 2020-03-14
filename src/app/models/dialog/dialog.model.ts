@@ -1,7 +1,7 @@
 export interface Dialog {
     inputs: object;
     outputs: object;
-    pos?: DialogPos;
+    position?: DialogPos;
 }
 
 export interface DialogPos {

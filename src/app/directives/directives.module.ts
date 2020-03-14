@@ -5,6 +5,7 @@ import { GridItemImageDirective } from '@directives/grid-item-image.directive';
 import { GridItemTitleDirective } from '@directives/grid-item-title.directive';
 import { CateGoryDirective } from '@directives/category.directive';
 import { AvatarDirective } from '@directives/avatar.directive';
+import { CloseDialogDirective } from '@directives/close-dialog.directive';
 
 const COMMON = [
   GridItemDirective,
@@ -12,6 +13,7 @@ const COMMON = [
   GridItemTitleDirective,
   CateGoryDirective,
   AvatarDirective,
+  CloseDialogDirective,
 ];
 
 @NgModule({

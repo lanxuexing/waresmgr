@@ -1,0 +1,39 @@
+<app-dialog>
+    <div class="image-container">
+        <img
+            class="goods-image"
+            [src]="selectedImage"
+            alt="">
+        <div class="price">
+            {{price | currency: 'CNY'}}
+            <img
+                appCloseDialog
+                class="close-button"
+                src="assets/images/icons/close.png"
+                alt="">
+        </div>
+        <div class="selected-desc">已选择: {{selectedName}}</div>
+    </div>
+    <div class="container">
+        <div>套餐</div>
+        <div class="set-meal">
+            <div
+                *ngFor="let item of detail;let idx = index;"
+                [ngClass]="{'selected': idx === selectedIndex}"
+                (click)="handleSelected(idx)">
+                {{item.name}}
+            </div>
+        </div>
+        <app-goods-amount
+            (counterchange)="handleCounterChange($event)">
+        </app-goods-amount>
+    </div>
+    <div class="buttons">
+        <button
+            class="confirm"
+            [ngStyle]="{'background-color': counter > 0 && selectedIndex >= 0 ? 'red' : 'darkgray'}"
+            (click)="handleConfirm()">
+            确定
+        </button>
+    </div>
+</app-dialog>
