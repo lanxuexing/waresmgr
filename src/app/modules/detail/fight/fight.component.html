@@ -1,0 +1,22 @@
+<div class="container">
+    <img
+        appAvatar
+        [avatarSize]="'2rem'"
+        [src]="fight.avatar"
+        alt="">
+    <div class="username">{{fight.startBy}}</div>
+    <div class="count-down">
+        <div>
+            还差
+            <span class="remaining-number">{{fight.remainingNumber}}人</span>
+            拼成
+        </div>
+        <!-- 倒计时 -->
+        <app-time-hourglass
+            [title]="timeHourglassTitle"
+            [effectiveDate]="effectiveDate"
+            [expiredDate]="expiredDate">
+        </app-time-hourglass>
+    </div>
+    <button type="button" class="group-button">去拼单</button>
+</div>

@@ -45,4 +45,10 @@
             margin: 3px 0;
         }
     }
+    app-snap-up {
+        grid-column: 1/4;
+        width: 100%;
+        padding: 0.4rem 0;
+        background-color: #F5F5F5;
+    }
 }

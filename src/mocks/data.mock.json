@@ -619,5 +619,31 @@
         "假一赔十"
       ]
     }
+  ],
+  "snap-up": [
+    {
+      "id": 1,
+      "goodsId": 1,
+      "startBy": "莹盈",
+      "avatar": "assets/images/avatars/avatar001.png",
+      "startAt": "2020-03-14",
+      "remainingNumber": 1
+    },
+    {
+      "id": 2,
+      "goodsId": 1,
+      "startBy": "甄姬",
+      "avatar": "assets/images/avatars/avatar002.png",
+      "startAt": "2020-03-16",
+      "remainingNumber": 2
+    },
+    {
+      "id": 2,
+      "goodsId": 6,
+      "startBy": "紫萱",
+      "avatar": "assets/images/avatars/avatar003.png",
+      "startAt": "2020-03-18",
+      "remainingNumber": 2
+    }
   ]
 }

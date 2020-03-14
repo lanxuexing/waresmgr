@@ -39,3 +39,9 @@ GET {{API}}/goods?category_like=mobile-digi
 # @name details
 GET {{API}}/details?goods.id=6
 
+###
+
+# 商品拼单
+# @name snap-up
+GET {{API}}/snap-up?goodsId=1
+

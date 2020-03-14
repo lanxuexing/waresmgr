@@ -1,0 +1,12 @@
+<div class="container" *ngIf="groupFight$ | async as groupFight">
+    <div class="title">
+        <span>{{groupFight.length}}在拼单，可直接参与</span>
+        <span>
+            <img src="assets/images/icons/navigate_next.png" alt="">
+        </span>
+    </div>
+    <app-fight
+        *ngFor="let item of groupFight"
+        [fight]="item">
+    </app-fight>
+</div>

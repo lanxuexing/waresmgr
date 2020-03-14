@@ -1,0 +1,28 @@
+:host {
+    .container {
+        display: flex;
+        padding: 0.5rem 1rem;
+        align-items: center;
+        .username {
+            flex: 1;
+            margin: 0 0.2rem;
+        }
+        .count-down {
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 0.2rem;
+            .remaining-number {
+                color: #E02F29;
+            }
+        }
+        .group-button {
+            background-color: #E02F29;
+            color: #FFF;
+            font-size: 1.1rem;
+            padding: 0.2rem -0.6rem;
+            border-radius: 5px;
+        }
+    }
+}
