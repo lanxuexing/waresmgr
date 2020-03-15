@@ -10,14 +10,17 @@ export class DialogService {
     private childComponentRef: ComponentRef<any>;
     private readonly dialogElementId = 'dialog-container';
     private readonly overlayElementId = 'overlay-container';
-    private data$ = new BehaviorSubject<object | null>(null);
+    private data$: BehaviorSubject<object | null>;
 
     constructor(
         private resolver: ComponentFactoryResolver, // 工厂解析器，用于得到任何工厂（Angular里的任何一个组件都是通过工厂造出来的）
         private appRef: ApplicationRef, // Angular APP的引用
         private injector: Injector, // 注入器
         @Inject(DOCUMENT) private document: Document // 相当于document文档对象模型
-    ) { }
+    ) {
+        const initDialogData = localStorage.getItem('waresmgr_dialog_data');
+        this.data$ = new BehaviorSubject<object | null>(JSON.parse(initDialogData));
+    }
 
 
     // 增加组件
@@ -102,6 +105,7 @@ export class DialogService {
     // 保存对话框的数据
     public saveDialogData(data: object | null): void {
         this.data$.next(data);
+        localStorage.setItem('waresmgr_dialog_data', JSON.stringify(data));
     }
 
     // 获取对话框数据
