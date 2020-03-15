@@ -5,11 +5,9 @@ import { Directive, OnInit, ElementRef, Renderer2, HostBinding, Input } from '@a
 })
 export class GridItemTitleDirective implements OnInit {
   // 第二种写法: HostBinding 绑定宿主的属性or样式，可以套用@Input()
-  @HostBinding('style.grid-area')
-  gridArea = 'title';
+  @HostBinding('style.grid-area') gridArea = 'title';
   @HostBinding('style.font-size')
-  @Input()
-  fontSize = '0.6rem';
+  @Input() fontSize = '0.6rem';
 
   constructor(
     private elementRef: ElementRef,
