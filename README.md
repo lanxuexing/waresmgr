@@ -31,7 +31,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 |   |   └── app.module.ts               根模块文件
 |   ├── assets                          资源文件目录
 |   ├── environments                    环境配置目录
-|   ├── manifest.json                   PWA配置文件
+|   ├── mocks                           json-server服务器目录
 |   ├── style.scss                      全局样式文件
 |   ├── index.html                      index 页面目录
 |   └── main.ts                         项目入口文件
