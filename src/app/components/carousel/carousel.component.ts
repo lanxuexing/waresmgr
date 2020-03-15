@@ -15,7 +15,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
   @Input() indicatorColor = 'white'; // 指示器默认颜色
   @Input() indicatorActiveColor = 'red'; // 指示器激活颜色
   @ViewChild('imgSlider', {static: true}) imgSlider: ElementRef;
-  private selectedIndex = 0; // 当前轮播图索引
+  selectedIndex = 0; // 当前轮播图索引
   private intervalSubs: Subscription;
 
 

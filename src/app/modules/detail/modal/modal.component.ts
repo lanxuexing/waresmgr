@@ -13,7 +13,7 @@ export class ModalComponent implements OnInit {
   @Input() selectedIndex = 0;
   @Output() selected = new EventEmitter<number>();
   @Output() formSubmitted = new EventEmitter<{detail: Detail, count: number}>();
-  private counter = 0;
+  counter = 0;
 
   constructor(
     private dialogService: DialogService
