@@ -2,7 +2,7 @@ import { Detail } from '@models/detail';
 import { DialogService } from '@services/dialog';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable, Subject, combineLatest, merge } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap, share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-order',
@@ -20,7 +20,9 @@ export class OrderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.order$ = this.dialogService.getDialogData();
+    this.order$ = this.dialogService.getDialogData().pipe(
+      share()
+    );
     // 单价
     const unitPrice$ = this.order$.pipe(
       map((item: {detail: Detail, count: number}) => item.detail.price)
