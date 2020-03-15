@@ -12,6 +12,7 @@ import { GoodsCardComponent } from '@components/goods-card';
 import { GoodsTileComponent } from '@components/goods-tile';
 import { BackButtonComponent } from '@components/back-button';
 import { DialogComponent } from '@components/dialog';
+import { PipesModule } from '@pipes/pipes.module';
 
 
 const COMMON = [
@@ -32,6 +33,7 @@ const MODULE = [
   FormsModule,
   ReactiveFormsModule,
   DirectivesModule,
+  PipesModule,
 ];
 
 
