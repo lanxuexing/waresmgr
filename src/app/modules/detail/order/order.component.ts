@@ -1,8 +1,10 @@
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Detail } from '@models/detail';
+import { Payment } from '@models/payment';
+import { DetailService } from '@services/detail';
 import { DialogService } from '@services/dialog';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { Observable, Subject, combineLatest, merge } from 'rxjs';
-import { map, tap, share } from 'rxjs/operators';
+import { combineLatest, merge, Observable, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-order',
@@ -14,15 +16,16 @@ export class OrderComponent implements OnInit {
   order$: Observable<object | null>;
   totalPrice$: Observable<number>;
   count$ = new Subject<number>();
+  payments: Payment[];
 
   constructor(
-    private dialogService: DialogService
+    private dialogService: DialogService,
+    private detailService: DetailService
   ) { }
 
   ngOnInit(): void {
-    this.order$ = this.dialogService.getDialogData().pipe(
-      share()
-    );
+    this.payments = this.detailService.getPaymentData();
+    this.order$ = this.dialogService.getDialogData();
     // 单价
     const unitPrice$ = this.order$.pipe(
       map((item: {detail: Detail, count: number}) => item.detail.price)
@@ -41,6 +44,11 @@ export class OrderComponent implements OnInit {
   // 商品数量
   handelCounterchange(count: number): void {
     this.count$.next(count);
+  }
+
+  // 立即支付
+  handlePay(): void {
+    console.log('🎉🎉🎉立即支付～');
   }
 
 }

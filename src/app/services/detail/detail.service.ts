@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Payments } from '@config/payment';
 import { environment } from '@environments/environment';
 import { Detail } from '@models/detail';
+import { Payment } from '@models/payment';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,6 +20,11 @@ export class DetailService {
         return this.http.get<Detail[]>(`${environment.host}/details`, {
             params: { 'goods.id': `${goodsId}` }
         });
+    }
+
+    // 获取支付配置数据
+    getPaymentData(): Payment[] {
+        return Payments;
     }
 
 }

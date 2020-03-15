@@ -49,7 +49,9 @@
             [counter]="order.count"
             (counterchange)="handelCounterchange($event)">
         </app-goods-amount>
-        <app-payment></app-payment>
+        <app-payment
+            [payments]="payments">
+        </app-payment>
     </div>
     <div class="toolbar">
         <div class="total-price">

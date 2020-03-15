@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Payment } from '@models/payment';
 
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.scss']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent {
+  @Input() payments: Payment[] = [];
+  @Output() paymentSelected = new EventEmitter<Payment>();
+  selectedId = 1;
 
   constructor() { }
 
-  ngOnInit() {
+  handleSelection(payment: Payment) {
+    this.selectedId = payment.id;
+    this.paymentSelected.emit(payment);
   }
 
 }
