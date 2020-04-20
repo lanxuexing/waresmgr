@@ -6,6 +6,7 @@
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "ng serve --port=4231",
     "server": "json-server ./src/mocks/data.mock.json -w",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
